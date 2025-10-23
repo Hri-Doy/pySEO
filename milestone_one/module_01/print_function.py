@@ -1,0 +1,7 @@
+print('This is Hriday')
+print("This is Hriday")
+print("'This is Hriday'")
+# print("Hello Moto")
+print('He said, "I am not going"')
+print('He says, "I\'m not going"')
+print("He says, \"I am not going\"")

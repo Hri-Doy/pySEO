@@ -1,10 +1,10 @@
-import requests
+from httpx import get
 
 api = 'AIzaSyCwjqYkU8xsf08wNfPfJFPOtyDOoD4VpIg'
 site = 'https://pdcaconsulting.com/'
 #url = f"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://pdcaconsulting.com/&key=AIzaSyCwjqYkU8xsf08wNfPfJFPOtyDOoD4VpIg"
 url = f'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={site}&key={api}'
-response = requests.get(url).json()
+response = get(url, timeout=360.0).json()
 fcp = response.get('lighthouseResult').get('audits').get('first-contentful-paint').get('score')
 lcp = response.get('lighthouseResult').get('audits').get('largest-contentful-paint').get('score')
 cls = response.get('lighthouseResult').get('audits').get('cumulative-layout-shift').get('score')

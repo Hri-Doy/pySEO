@@ -9,5 +9,5 @@ fcp = response.get('lighthouseResult').get('audits').get('first-contentful-paint
 lcp = response.get('lighthouseResult').get('audits').get('largest-contentful-paint').get('score')
 cls = response.get('lighthouseResult').get('audits').get('cumulative-layout-shift').get('score')
 
-print(f'Your site is: {site}, FCP: {fcp}, LCP: {lcp}, CLS: {cls}', sep='\n')
+#print(f'Your site is: {site}, FCP: {fcp}, LCP: {lcp}, CLS: {cls}', sep='\n')
 print(f'Your site is {site}', f'FCP : {fcp}', f'LCP : {lcp}', f'CLS: {cls}', sep='\n')
